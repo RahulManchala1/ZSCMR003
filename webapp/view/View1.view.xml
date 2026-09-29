@@ -1,0 +1,24 @@
+<mvc:View controllerName="com.mm.zscmr003.controller.View1"
+    xmlns:smartfilterbar="sap.ui.comp.smartfilterbar"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core" xmlns:smarttable="sap.ui.comp.smarttable">
+    <Page id="page" title="{i18n>title}">
+    <smartfilterbar:SmartFilterBar id="listReportFilter" entitySet="UnofficialNotice"
+            showAllFilters="true" smartVariant="true" persistencyKey="UniqueAndStablePersistencyKey">
+          
+        </smartfilterbar:SmartFilterBar>
+
+        <smarttable:SmartTable id="listReport" useVariantManagement="true"
+            entitySet="UnofficialNotice" class="sapUiResponsiveContentPadding"
+            enableAutoColumnWidth="true" persistencyKey="SmartTableAnalytical_Explored"
+            smartFilterId="listReportFilter" showRowCount="true"
+            useTablePersonalisation="true" header="{i18n>SearchResults}" showVariantManagement="true">
+            <smarttable:layoutData>
+                <FlexItemData id="_IDGenFlexItemData" growFactor="1" baseSize="0%" />
+            </smarttable:layoutData>
+
+
+        </smarttable:SmartTable>
+    </Page>
+</mvc:View>
